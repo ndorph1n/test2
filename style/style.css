@@ -475,6 +475,7 @@ ul {
 }
 
 .form__button {
+    padding: 15px 0;
     align-self: start;
     grid-column: 1/2;
     font-size: 14px;
@@ -636,6 +637,7 @@ ul {
 
     .form {
         justify-items: center;
+        height: 70%;
     }
 
     .form__image {
@@ -726,11 +728,51 @@ ul {
     .form {
         min-width: 225px;
         width: 90%;
-        height: 30%;
+        height: 40%;
         gap:10px 0;
         padding: 10px !important;
     }
 
+    .form__image {
+        display: none;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .form__label {
+        font-size: 18px ;
+    }
+    
+    .form__image {
+       justify-self: center;
+       width: 70%;
+    }
+}
+@media screen and (orientation: landscape) and (max-height: 600px){
+    .form {
+        width: 40%;
+        height: 65%;
+        padding: 15px !important;
+    }
+
+    .form__image {
+        width: 60%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px){
+    .form {
+        height: 50%;
+        grid-template: none; 
+        justify-content: center;
+    }
+    .form__input {
+        width: 100%;
+    }
+
+    .form__button {
+        width: 100%;
+    }
     .form__image {
         display: none;
     }
