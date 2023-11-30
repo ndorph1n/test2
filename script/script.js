@@ -56,7 +56,7 @@ const colors = document.querySelectorAll('.color');
 colors.forEach(item => item.addEventListener('click',changeColor));
 
 function changeColor(e) {
-    colors.forEach(color => {color.classList.remove('color-active')});
+    e.target.parentNode.querySelectorAll('.color').forEach(color => {color.classList.remove('color-active')});
     e.target.classList.add('color-active');
     if (e.target.classList.contains('color')){
         const image = e.target.parentNode.parentNode.querySelector('.card__image');
