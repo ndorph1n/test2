@@ -49,3 +49,17 @@ window.addEventListener('scroll', () => {
     hero.getBoundingClientRect().y < 25 ? chatIcon.style.display = 'block': chatIcon.style.display = 'none';
 });
 
+const cards = document.querySelectorAll('.card');
+cards.forEach((card,index) => card.setAttribute('id',`${index}`));
+
+const colors = document.querySelectorAll('.color');
+colors.forEach(item => item.addEventListener('click',changeColor));
+
+function changeColor(e) {
+    colors.forEach(color => {color.classList.remove('color-active')});
+    e.target.classList.add('color-active');
+    if (e.target.classList.contains('color')){
+        const image = e.target.parentNode.parentNode.querySelector('.card__image');
+        image.src=`image/${e.target.parentNode.parentNode.dataset.model}/${e.target.dataset.color}.png`;
+    }
+}
