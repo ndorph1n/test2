@@ -28,7 +28,7 @@ popUp.innerHTML = `
             <input class="form__input" type='tel' placeholder="+7xxxxxxxxxx">
         </label>
         <button class="form__button button-black">Отправить</button>
-        <img class="form__image" src="/image/form.png">
+        <img class="form__image" src="image/form.png">
 `;
 document.body.append(popUp);
 
